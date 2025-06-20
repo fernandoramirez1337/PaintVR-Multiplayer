@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/fer/UI/MainMenu%202.uss?fileID=7433441132597879392&amp;guid=a6cefd19961b34393b08d2a9999a0b4c&amp;type=3#MainMenu 2" />
+    <ui:VisualElement name="Panel" class="panel">
+        <ui:VisualElement name="Container" class="menu">
+            <ui:Label text="select player" name="TopLabel" class="menu-text" />
+            <ui:VisualElement name="Container" class="menu" style="flex-direction: row; flex-wrap: nowrap; width: auto; height: 60%; min-height: auto; justify-content: space-evenly; align-self: stretch; align-items: stretch; align-content: flex-start; top: -5%;">
+                <ui:Button text="Editor (VR)" name="VRButton" class="unity-button" style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);" />
+                <ui:Button text="Inspector (PC)" name="PCButton" style="background-color: rgb(255, 0, 14); color: rgb(255, 255, 255);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
