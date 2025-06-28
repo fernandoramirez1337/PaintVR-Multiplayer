@@ -18,7 +18,7 @@ public partial class InspectorSection : VisualElement
     private void GenerateVisualContent(MeshGenerationContext context)
     {
         var painter = context.painter2D;
-        painter.fillColor = new Color(0.8f, 0.8f, 0.8f); // Un gris claro
+        painter.fillColor = new Color(56f / 255f, 56f / 255f, 56f / 255f); // Un gris oscuro
         var rect = context.visualElement.contentRect;
         painter.BeginPath();
         painter.MoveTo(new Vector2(rect.x, rect.y));

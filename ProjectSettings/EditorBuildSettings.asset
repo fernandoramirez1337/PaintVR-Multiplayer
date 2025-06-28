@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 13f6f87036926f94ab0417ca1b31725c
   - enabled: 0
@@ -17,12 +17,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PcScene.unity
     guid: 17a34b25aabf74b93babfe377d1da1b5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BCS02.unity
     guid: b688c7725e9f34783bf403915380f7e3
-  - enabled: 1
+  - enabled: 0
+    path: Assets/Scenes/MainMenu.unity
+    guid: 6316164b0d9c546e695a6cb6f1513ff0
+  - enabled: 0
     path: Assets/Scenes/BCS03.unity
     guid: a08ce708ebd0348e88af78002f6ba009
+  - enabled: 1
+    path: Assets/Scenes/thu26jun.unity
+    guid: 058d4d77e91f94575a024bc615b7ae72
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e3aee76b9372917449aef639e2f74814,
       type: 2}

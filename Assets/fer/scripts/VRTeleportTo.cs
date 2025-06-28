@@ -23,6 +23,6 @@ public class VRTeleportTo : MonoBehaviour
 
         // --- ROTACIÓN ---
         // Rota 90° a la derecha (eje Y)
-        cameraRig.Rotate(0, 90f, 0, Space.World);
+        //cameraRig.Rotate(0, 90f, 0, Space.World);
     }
 }

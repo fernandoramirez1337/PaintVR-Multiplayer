@@ -4,13 +4,14 @@ using UnityEngine.UIElements;
 public class PlayerMenuController : MonoBehaviour
 {
     [Header("Referencias")]
-    [Tooltip("Arrastra aquí el objeto del Jugador que tiene el script PCView.")]
     public PCView pcView;
-
-    [Tooltip("Arrastra un objeto para marcar el punto de teletransporte.")]
     public Transform teleportDestination;
+    
+    // --- INICIO DE LA MODIFICACIÓN ---
+    [Tooltip("Arrastra aquí el objeto que se debe activar después del teletransporte.")]
+    public GameObject objectToActivateOnTeleport;
+    // --- FIN DE LA MODIFICACIÓN ---
 
-    // --- VARIABLES DE UI ---
     private VisualElement ui;
     private Button VRButton;
     private Button PCButton;
@@ -28,26 +29,21 @@ public class PlayerMenuController : MonoBehaviour
         VRButton.clicked += OnVRButtonClicked;
         PCButton.clicked += OnPCButtonClicked;
     }
-
-    /// <summary>
-    /// REQUISITO 1: Desaparecer cuando se aprieta el botón VRButton.
-    /// </summary>
+    
     private void OnVRButtonClicked()
     {
-        Debug.Log("PlayerMenuController: Botón VR presionado. Ocultando este GameObject.");
         gameObject.SetActive(false);
     }
-
-    /// <summary>
-    /// REQUISITO 2: Debe llamar a PCView cuando se aprieta el botón PCButton.
-    /// </summary>
+    
     private void OnPCButtonClicked()
     {
     if (pcView != null && teleportDestination != null)
     {
-      Debug.Log("PlayerMenuController: Botón PC presionado. Llamando a PCView.TeleportAndLock().");
-      pcView.TeleportAndLock(teleportDestination.position);
+      // --- INICIO DE LA MODIFICACIÓN ---
+      // Ahora pasamos el objeto a activar como segundo argumento.
+      pcView.Teleport(teleportDestination.position, objectToActivateOnTeleport);
       gameObject.SetActive(false);
+            // --- FIN DE LA MODIFICACIÓN ---
     }
     else
     {

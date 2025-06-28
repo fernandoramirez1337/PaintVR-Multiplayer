@@ -18,7 +18,7 @@ public partial class TopSection : VisualElement
     private void GenerateVisualContent(MeshGenerationContext context)
     {
         var painter = context.painter2D;
-        painter.fillColor = new Color(0.8f, 0.8f, 0.8f); // Un gris claro
+        painter.fillColor = new Color(56f / 255f, 56f / 255f, 56f / 255f); // Un gris oscuro
         painter.BeginPath();
         painter.MoveTo(new Vector2(0, 0));
         painter.LineTo(new Vector2(context.visualElement.contentRect.width, 0));
